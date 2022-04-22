@@ -118,6 +118,7 @@
      align-items: center;
      justify-content: flex-end;
      font-family: "Roboto", sans-serif;
+     cursor: pointer;
    }
    .contenedoricono {
      height: 58px;
@@ -375,6 +376,7 @@
   align-items: center;
   padding: 6px;
   border: red 5px outset;
+  cursor: pointer;
 }
 .flecha {
   width: 30px;
