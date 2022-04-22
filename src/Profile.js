@@ -4,14 +4,13 @@ import Favoritos from "./Favoritos.js";
 import userImg from "./userImg.jpg";
 
 
-
 function Profile({ tweet,tweets, user, handleDelete, handleLikes, setOpenProfile }) {
   const [tabs, setTabs] = useState(0);
 
   return (
     <div className="perfilguardado">
       <div className="headerperfil">
-      <div  className="menu1">{user.displayName}!</div>
+      <div className="menu1">{user.displayName}!</div>
       </div>
       <div className="menudos"> 
       <img
