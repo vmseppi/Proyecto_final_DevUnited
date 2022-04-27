@@ -1,6 +1,6 @@
- .body{
-  background-color: #60265b;
- }
+.body{
+  background-color: #2E132C;
+}
  .App {
       display: flex;
       flex-direction: column;
@@ -202,6 +202,9 @@
    }
       
    @media screen and (min-width:200px) and (max-width: 1300px) {
+    .body{
+      background-color: #2E132C;
+    }
  .App {
   display: flex;
   flex-wrap: wrap;
