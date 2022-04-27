@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./post.css";
 
 const PostUsuario = ({tweet, user, handleDelete, handleLikes, userImg})=>{
-    console.log({tweet, user, handleDelete, handleLikes, userImg})
 if (tweet.uid === user.uid ){
     return(
         <div className={styles.contenedortweet}>
