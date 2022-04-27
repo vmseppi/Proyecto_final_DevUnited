@@ -57,7 +57,7 @@
      background-color: #2E132C;
      flex-wrap: wrap;
      flex-direction: column;
-     height: 60%;
+     height: 250px;
      border: #60265B 2px solid;
      color: #ffff;
      font-family: 'Fira Code', monospace; 
@@ -370,7 +370,7 @@
 .botonlogout {
   font-family: arcade;
   background-color: #f50d5a;
-  height: 41px;
+  height: auto;
   width: 51%;
   display: flex;
   align-items: center;
