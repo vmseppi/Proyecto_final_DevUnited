@@ -44,8 +44,8 @@ const TweetsApp = ({
       </div>
       <div className="contextotweet">
         {tweets.map((tweet) => {
+          console.log(tweet.likes)
           const isLike = tweet.likes.includes(user.uid);
-
           return (
             <div className="contenedortweet" key={tweet.id}>
               {user.photoURL ? (

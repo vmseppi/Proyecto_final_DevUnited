@@ -1,14 +1,19 @@
+import "./App.css";
+import AppRouter from "./AppRouter.js";
 import { useEffect, useState } from "react";
 import firebase, { firestore, auth, logout } from "./firebase/firebase.js";
 import { collections } from "./firebase/firebaseConfig.js";
+import swal from 'sweetalert';
+
+
 
 // import userImg from "./userImg.jpg";
 
-import "./App.css";
+
 // import TweetsApp from "./TweetsApp.js";
 // import Profile from "./Profile.js";
 // import PantallaInicio from "./PantallaInicio.js";
-import AppRouter from "./AppRouter.js";
+
 
 function App() {
   const [tweets, setTweets] = useState([]);
@@ -38,10 +43,25 @@ function App() {
 
   //borrar comentarios
   const handleDelete = (id) => {
+    swal({
+      title: "¿Seguro que deseas eliminarlo?",
+      text: "Una vez eliminado no podrás recuperar este tweet",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete)=>{
+      if (willDelete){
     const nuevosTweets = tweets.filter((tweet) => tweet.id !== id);
     setTweets(nuevosTweets);
-    firestore.doc(`${collections.TWEETS}/${id}`).delete();
-  };
+    firestore.doc(`${collections.TWEETS}/${id}`).delete()
+    swal("Se elimino correctamente", {icon:"success"});
+  } else {
+    swal("se guardo tu tweet")
+  }
+  });
+}
+
 
   //manejador likes
   const handleLikes = async (id, uidUser, isLike) => {
