@@ -1,5 +1,5 @@
 // ES6 Modules or TypeScript
-import swal from 'sweetalert2'
+import Swal from 'sweetalert2'
 
 // CommonJS
 const Swal = require('sweetalert2')
